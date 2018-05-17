@@ -26,6 +26,9 @@
                         <li>
                             <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
                         </li>
+                        <li>
+                            <button class="btn btn-danger js-delete-user" data-id="{{ user.id }}">delete</button>
+                        </li>
                     </ul>
                 </td>
             </tr>
@@ -38,4 +41,19 @@
             <a href="{{ path('user_new') }}">Create a new user</a>
         </li>
     </ul>
+            
+    <script type="text/javascript">
+        $('.js-delete-user').on('click', function() {
+            var id = $(this).data('id');
+            $.ajax({
+                method: "DELETE",
+                url: "http://localhost/sf/web/app_dev.php/user/" + id,
+                dataType: "json"
+            })
+            .done(function( msg ) {
+{#                alert( "Info: " + msg );#}
+                location.reload();
+            });
+        });
+    </script>
 {% endblock %}

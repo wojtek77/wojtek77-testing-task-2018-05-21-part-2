@@ -33,3 +33,6 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    AppBundle\Service\RestClient:
+        arguments:
+            $baseUri: 'http://localhost/sf/web/app_dev.php/user/'

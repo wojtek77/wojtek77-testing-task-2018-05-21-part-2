@@ -35,6 +35,15 @@ class User
      */
     private $lastname;
 
+    function __construct(\stdClass $data = null)
+    {
+        if (isset($data)) {
+            $this->id = $data->id;
+            $this->firstname = $data->firstname;
+            $this->lastname = $data->lastname;
+        }
+    }
+
 
     /**
      * Get id

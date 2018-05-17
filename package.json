@@ -1,0 +1,11 @@
+{
+  "name": "sf-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wojciech Brüggemann <wojtek77@o2.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
+}
